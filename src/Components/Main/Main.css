@@ -1,0 +1,30 @@
+main {
+  display: flex;
+  margin-top: 50px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.tool-bar {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  margin: var(--margin);
+  justify-content: space-between;
+}
+
+.filter {
+  display: flex;
+  gap: 10px;
+}
+
+.tool-bar * {
+  font-size: clamp(16px, 2vw, 20px);
+}
+.status {
+  cursor: pointer;
+}
+.active {
+  color: red;
+  text-shadow: 1px 0px 10px blue;
+}

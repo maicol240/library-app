@@ -1,15 +1,16 @@
 header {
   display: flex;
-  padding: 20px 20px;
-  background: linear-gradient(to right, rgb(0, 119, 184), rgb(0, 52, 80));
+  background: var(--primary-color);
+  padding: 20px;
 }
 
 .header-content {
   color: white;
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin: var(--margin);
 }
 
 .header__title {
@@ -28,7 +29,7 @@ header {
 
 .button {
   font-weight: bolder;
-  font-size: clamp(12px, 2vw, 25px);
+  font-size: clamp(12px, 4vw, 32px);
   cursor: pointer;
   border: black;
 }
