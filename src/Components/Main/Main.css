@@ -6,11 +6,11 @@ main {
 }
 
 .tool-bar {
-  border: 1px solid black;
   display: flex;
   align-items: center;
   margin: var(--margin);
   justify-content: space-between;
+  border-bottom: solid 1px black;
 }
 
 .filter {
@@ -29,9 +29,15 @@ main {
   text-shadow: 1px 0px 10px blue;
 }
 .book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: max-content;
+  gap: 10px;
   margin: var(--margin);
   margin-top: 20px;
   border: 1px solid black;
-  height: 70vh;
   background: var(--primary-color);
+  justify-items: center;
+  padding: 20px;
+  min-height: 60vh;
 }

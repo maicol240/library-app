@@ -1,0 +1,22 @@
+.card-container {
+  padding: 20px;
+  border-radius: 5px;
+  line-height: 1;
+  border: 1px solid black;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: 1px 1px 10px yellow;
+  height: 300px;
+  width: clamp(150px, 80%, 300px);
+  text-align: center;
+}
+
+.card-container img {
+  width: 150px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}

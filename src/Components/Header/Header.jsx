@@ -10,7 +10,7 @@ export default function Header() {
             <img src={book} alt="Book" className="book-icon" />
             <h1>MyLibrary</h1>
           </div>
-          <div className="button">Create</div>
+          <button className="button">Create</button>
         </div>
       </header>
     </>
