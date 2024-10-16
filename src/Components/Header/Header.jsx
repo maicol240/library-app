@@ -1,4 +1,4 @@
-import styles from "./Header.css";
+import "./Header.css";
 import book from "../../../public/book.svg";
 
 export default function Header() {
