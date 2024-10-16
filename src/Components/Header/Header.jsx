@@ -1,5 +1,5 @@
 import "./Header.css";
-import book from "../../../public/book.svg";
+import book from "/book.svg";
 
 export default function Header() {
   return (

@@ -28,7 +28,9 @@ export default function Main() {
             ))}
           </div>
         </div>
-        <div className="book-list"></div>
+        <div className="book-list">
+          <div>klk</div>
+        </div>
       </main>
     </>
   );

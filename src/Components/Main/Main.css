@@ -28,3 +28,10 @@ main {
   color: red;
   text-shadow: 1px 0px 10px blue;
 }
+.book-list {
+  margin: var(--margin);
+  margin-top: 20px;
+  border: 1px solid black;
+  height: 70vh;
+  background: var(--primary-color);
+}
