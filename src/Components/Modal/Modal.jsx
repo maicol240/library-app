@@ -1,8 +1,8 @@
 import "./Modal.css";
 import { useRef } from "react";
-export default function Modal({ showModal, onClose }) {
+export default function Modal({ showModal, onClose, addBook }) {
   const formInput = ["Name", "Cover", "Author", "Link"];
-  statusRef = useRef(null);
+  const statusRef = useRef(null);
   const inputRefs = formInput.reduce((acc, input) => {
     acc[input] = useRef(null);
     return acc;
@@ -12,7 +12,7 @@ export default function Modal({ showModal, onClose }) {
     e.preventDefault();
 
     let img = inputRefs.Cover.current.value;
-    if (Img === null || img === "") {
+    if (img === null || img === "") {
       img = "https://via.placeholder.com/150";
     }
     let link = inputRefs.Link.current.value;
@@ -21,12 +21,16 @@ export default function Modal({ showModal, onClose }) {
       link = "";
     }
     const book = {
+      id: null, // Automatically assigned id based on current length of books arrayl,
       img: img,
       title: inputRefs.Name.current.value,
       author: inputRefs.Author.current.value,
       status: statusRef.current.value,
       link: link,
     };
+
+    addBook(book);
+    onClose();
   };
 
   if (showModal)
@@ -42,7 +46,9 @@ export default function Modal({ showModal, onClose }) {
                   <input
                     required={input === "Name"} // Only required for Name
                     className="input"
-                    type={input === "Link" ? "url" : "text"} // Use type "url" for Link
+                    type={
+                      input === "Link" || input === "Cover" ? "url" : "text"
+                    } // Use type "url" for Link or Cover
                     id={input}
                     name={input}
                     ref={inputRefs[input]}
@@ -59,7 +65,7 @@ export default function Modal({ showModal, onClose }) {
               >
                 Status
               </label>
-              <select id="Status" name="Status" required>
+              <select ref={statusRef} id="Status" name="Status" required>
                 <option value="" disabled selected>
                   Select an option
                 </option>
