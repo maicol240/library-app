@@ -43,7 +43,7 @@ To help you get started, the app comes with some initial seed data. This data po
 
 5. **Title**: *Harry Potter and the Sorcerer's Stone*
    - **Author**: J.K. Rowling
-   - **Status**: Reading (assuming it's still ongoing)
+   - **Status**: Reading 
 
 These entries can be modified or deleted as per user requirements.
 
