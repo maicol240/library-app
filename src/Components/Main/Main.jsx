@@ -41,6 +41,8 @@ export default function Main() {
       link: "https://www.amazon.com/Harry-Potter-Sorcerers-Stone-Rowling/dp/059035342X",
     },
   ];
+
+  // state for filter
   const filters = ["All", "Reading", "Completed", "Pending"];
   const [status, setStatus] = useState("All");
   const [count, setCount] = useState(books.length);

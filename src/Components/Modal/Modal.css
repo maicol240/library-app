@@ -1,0 +1,64 @@
+.overlay {
+  display: flex;
+  position: fixed;
+  background-color: rgba(173, 216, 230, 0.6);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px blue;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(70px, 1fr));
+  grid-auto-rows: auto;
+}
+.form-text {
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: clamp(16px, 2vw, 20px);
+  flex-direction: column;
+}
+
+input:invalid {
+  border: 1px red solid;
+}
+.status-selection {
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(16px, 2vw, 20px);
+}
+.status-selection select {
+  text-align: center;
+  width: 100%;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-buttons button {
+  width: 100px;
+  padding: 5px;
+}

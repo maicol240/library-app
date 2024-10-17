@@ -61,7 +61,7 @@
   cursor: pointer;
 }
 .card-container .delete {
-  background-color: hsl(0, 100%, 50%);
+  background-color: crimson;
 }
 
 .card-container .delete:hover {
