@@ -18,11 +18,16 @@ function App() {
   const toggleModal = () => {
     setModalIsOpen(!showModal);
   };
+  const handleDelete = (id) => {
+    const updatedBooks = books.filter((book) => book.id !== id);
+    updatedBooks.forEach((book, index) => (book.id = index + 1));
+    setBooks(updatedBooks);
+  };
   return (
     <>
       <Header openModal={toggleModal}></Header>
       <Modal showModal={showModal} addBook={addBook} onClose={toggleModal} />
-      <Main books={books} />
+      <Main books={books} deleteBook={handleDelete} />
     </>
   );
 }

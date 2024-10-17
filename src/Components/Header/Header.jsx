@@ -10,7 +10,7 @@ export default function Header({ openModal }) {
             <img src={book} alt="Book" className="book-icon" />
             <h1>MyLibrary</h1>
           </div>
-          <button onClick={openModal} className="button">
+          <button type="button" onClick={openModal} className="button">
             Create
           </button>
         </div>

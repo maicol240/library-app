@@ -1,6 +1,6 @@
 import "./Card.css";
 
-export default function Card({ book }) {
+export default function Card({ book, deleteBook }) {
   const handleError = (event) => {
     event.target.src = "https://via.placeholder.com/150";
   };
@@ -35,7 +35,9 @@ export default function Card({ book }) {
         )}
         <div className="actions">
           <button className="edit">Edit</button>
-          <button className="delete">Delete</button>
+          <button onClick={() => deleteBook(book.id)} className="delete">
+            Delete
+          </button>
         </div>
       </div>
     </>

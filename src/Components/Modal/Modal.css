@@ -37,9 +37,6 @@
   flex-direction: column;
 }
 
-input:invalid {
-  border: 1px red solid;
-}
 .status-selection {
   padding: 10px;
   margin-bottom: 10px;
