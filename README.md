@@ -21,6 +21,31 @@ The Library App is a web application built using React.js, HTML, and CSS. It all
 - **Edit and Delete**: Users can edit or delete existing books from the list.
 - **Responsive Design**: The app is designed to be responsive and works well on both small and large screens.
 - **Book Count**: Displays the total number of books currently in the app.
+## Seed Data
+
+To help you get started, the app comes with some initial seed data. This data populates the library with sample books, allowing users to see how the app functions without needing to add new entries right away. The seed data includes:
+
+1. **Title**: *To Kill a Mockingbird*
+   - **Author**: Harper Lee
+   - **Status**: Completed
+
+2. **Title**: *The Hobbit*
+   - **Author**: J.R.R. Tolkien
+   - **Status**: Reading
+
+3. **Title**: *The Da Vinci Code*
+   - **Author**: Dan Brown
+   - **Status**: Pending
+
+4. **Title**: *The Hunger Games*
+   - **Author**: Suzanne Collins
+   - **Status**: Completed
+
+5. **Title**: *Harry Potter and the Sorcerer's Stone*
+   - **Author**: J.K. Rowling
+   - **Status**: Reading (assuming it's still ongoing)
+
+These entries can be modified or deleted as per user requirements.
 
 ## Installation
 
