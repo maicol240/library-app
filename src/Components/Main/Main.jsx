@@ -12,28 +12,29 @@ export default function Main() {
       link: "https://www.amazon.com/Kill-Mockingbird-Harper-Lee/dp/0446310786",
     },
     {
-      img: "https://images-na.ssl-images-amazon.com/images/I/71tFhdcC0XL.jpg",
+      img: "https://m.media-amazon.com/images/I/712cDO7d73L._SL1500_.jpg",
       title: "The Hobbit",
       author: "J.R.R. Tolkien",
       status: "Reading",
       link: "https://www.amazon.com/Hobbit-J-R-Tolkien/dp/054792822X",
     },
     {
-      img: "https://images-na.ssl-images-amazon.com/images/I/81m1s4wIPML.jpg",
+      img: "https://images-na.ssl-images-amazon.com/images/I/81EcXiV-9WL.jpg",
       title: "The Da Vinci Code",
       author: "Dan Brown",
       status: "Pending",
       link: "https://www.amazon.com/Da-Vinci-Code-Dan-Brown/dp/0307474275",
     },
     {
-      img: "https://images-na.ssl-images-amazon.com/images/I/81UWB7oUZ0L.jpg",
+      img: "https://m.media-amazon.com/images/I/61I24wOsn8L._SL1200_.jpg",
       title: "The Hunger Games",
       author: "Suzanne Collins",
       status: "Completed",
       link: "https://www.amazon.com/Hunger-Games-Suzanne-Collins/dp/0439023521",
     },
     {
-      img: "https://images-na.ssl-images-amazon.com/images/I/81EcXiV-9WL.jpg",
+      img: "https://images-na.ssl-images-amazon.com/images/I/81m1s4wIPML.jpg",
+
       title: "Harry Potter and the Sorcerer's Stone",
       author: "J.K. Rowling",
       status: "Reading",
@@ -76,17 +77,7 @@ export default function Main() {
           {books
             .filter((book) => status === "All" || book.status === status)
             .map((book) => (
-              <Card key={book.title}>
-                <img src={book.img} alt={book.title} />
-                <h3>{book.title}</h3>
-                <p>
-                  <strong>Author: </strong> {book.author}
-                </p>
-                <p>
-                  <strong>Status: </strong>
-                  {book.status}
-                </p>
-              </Card>
+              <Card key={book.title} book={book} />
             ))}
         </div>
       </main>

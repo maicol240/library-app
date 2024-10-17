@@ -1,7 +1,7 @@
 import "./Header.css";
 import book from "/book.svg";
 
-export default function Header() {
+export default function Header({ openModal }) {
   return (
     <>
       <header>
@@ -10,7 +10,9 @@ export default function Header() {
             <img src={book} alt="Book" className="book-icon" />
             <h1>MyLibrary</h1>
           </div>
-          <button className="button">Create</button>
+          <button onClick={openModal} className="button">
+            Create
+          </button>
         </div>
       </header>
     </>

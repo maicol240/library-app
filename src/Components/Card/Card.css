@@ -1,22 +1,76 @@
 .card-container {
-  padding: 20px;
   border-radius: 5px;
   line-height: 1;
   border: 1px solid black;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
   box-shadow: 1px 1px 10px yellow;
-  height: 300px;
+  max-height: 400px;
   width: clamp(150px, 80%, 300px);
   text-align: center;
+  gap: 10px;
+  padding: 20px;
+  justify-content: end;
+}
+.card-container > * {
+  margin: 0;
+  padding: 5px;
 }
 
 .card-container img {
   width: 150px;
   height: 140px;
-  object-fit: cover;
   border-radius: 5px 5px 0 0;
+  border: black 1px solid;
+}
+
+.actions {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  justify-content: space-around;
+}
+.actions button {
+  flex-grow: 1;
+  border-radius: 5px;
+}
+
+.card-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: hsl(201, 100%, 60%);
+  width: 90%;
+}
+
+.card-container a:visited {
+  color: black;
+}
+.card-container a:hover {
+  background-color: hsl(201, 100%, 80%);
+}
+
+.card-container button {
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.card-container .delete {
+  background-color: hsl(0, 100%, 50%);
+}
+
+.card-container .delete:hover {
+  background-color: hsl(0, 100%, 70%);
+}
+.card-container .edit {
+  background-color: hsl(45, 100%, 60%);
+}
+
+.card-container .edit:hover {
+  background-color: hsl(45, 100%, 80%);
 }
