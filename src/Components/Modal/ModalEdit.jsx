@@ -26,11 +26,16 @@ export default function ModalEdit({
     if (link === null || link === "") {
       link = "";
     }
+    let author = inputRefs.Author.current.value;
+    if (author === "") {
+      author = "unknown";
+    }
+
     const updatedBook = {
       id: getBook.id,
       img: img,
       title: inputRefs.Title.current.value,
-      author: inputRefs.Author.current.value,
+      author: author,
       status: statusRef.current.value,
       link: link,
     };

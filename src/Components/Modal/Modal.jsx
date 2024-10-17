@@ -1,7 +1,7 @@
 import "./Modal.css";
 import { useRef } from "react";
 export default function Modal({ showModal, onClose, addBook }) {
-  const formInput = ["Name", "Cover", "Author", "Link"];
+  const formInput = ["Title", "Cover", "Author", "Link"];
   const statusRef = useRef(null);
   const inputRefs = formInput.reduce((acc, input) => {
     acc[input] = useRef(null);
@@ -20,11 +20,15 @@ export default function Modal({ showModal, onClose, addBook }) {
     if (link === null || link === "") {
       link = "";
     }
+    let author = inputRefs.Author.current.value;
+    if (author === "") {
+      author = "unknown";
+    }
     const book = {
       id: null, // Automatically assigned id based on current length of books arrayl,
       img: img,
-      title: inputRefs.Name.current.value,
-      author: inputRefs.Author.current.value,
+      title: inputRefs.Title.current.value,
+      author: author,
       status: statusRef.current.value,
       link: link,
     };
@@ -44,7 +48,7 @@ export default function Modal({ showModal, onClose, addBook }) {
                 <div className="form-text" key={index}>
                   <label htmlFor={input}>{input}</label>
                   <input
-                    required={input === "Name"} // Only required for Name
+                    required={input === "Title"} // Only required for Title
                     className="input"
                     type={
                       input === "Link" || input === "Cover" ? "url" : "text"
