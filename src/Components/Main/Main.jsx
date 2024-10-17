@@ -1,7 +1,7 @@
 import "./Main.css";
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
-export default function Main({ books, deleteBook }) {
+export default function Main({ books, deleteBook, handleEdit }) {
   const filters = ["All", "Reading", "Completed", "Pending"];
   const [status, setStatus] = useState("All");
   const [count, setCount] = useState(0);
@@ -38,7 +38,12 @@ export default function Main({ books, deleteBook }) {
           {books
             .filter((book) => status === "All" || book.status === status)
             .map((book) => (
-              <Card key={book.id} deleteBook={deleteBook} book={book} />
+              <Card
+                key={book.id}
+                showEdit={handleEdit}
+                deleteBook={deleteBook}
+                book={book}
+              />
             ))}
         </div>
       </main>
