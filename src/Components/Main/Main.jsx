@@ -23,11 +23,11 @@ export default function Main({ books, deleteBook, handleEdit }) {
         <div className="tool-bar">
           <h2>Books: {count}</h2>
 
-          {/* <Dropdown
+          <Dropdown
             filters={filters}
             handleFilterChange={handleFilterChange}
             status={status}
-          ></Dropdown> */}
+          ></Dropdown>
 
           <div className="filter">
             <h2>Status:</h2>
