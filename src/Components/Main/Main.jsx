@@ -35,7 +35,7 @@ export default function Main({ books, deleteBook, handleEdit }) {
             {filters.map((filter) => (
               <h2
                 className={`status ${status === filter ? "active" : " "}`}
-                onClick={handleFilterChange}
+                onClick={() => handleFilterChange(filter)}
                 key={filter}
               >
                 {filter}
