@@ -1,13 +1,15 @@
 import "./Main.css";
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
+import Dropdown from "../Dropdown/Dropdown";
+
 export default function Main({ books, deleteBook, handleEdit }) {
   const filters = ["All", "Reading", "Completed", "Pending"];
   const [status, setStatus] = useState("All");
   const [count, setCount] = useState(0);
 
-  const handleFilterChange = (e) => {
-    setStatus(e.target.textContent);
+  const handleFilterChange = (filter) => {
+    setStatus(filter);
   };
   useEffect(() => {
     setCount(
@@ -20,6 +22,13 @@ export default function Main({ books, deleteBook, handleEdit }) {
       <main>
         <div className="tool-bar">
           <h2>Books: {count}</h2>
+
+          <Dropdown
+            filters={filters}
+            handleFilterChange={handleFilterChange}
+            status={status}
+          ></Dropdown>
+
           <div className="filter">
             <h2>Status:</h2>
 

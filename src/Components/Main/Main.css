@@ -18,6 +18,12 @@ main {
   gap: 10px;
 }
 
+@media (max-width: 639px) {
+  .filter {
+    display: none;
+  }
+}
+
 .tool-bar * {
   font-size: clamp(16px, 2vw, 20px);
 }
