@@ -2,7 +2,7 @@ import "./Card.css";
 
 export default function Card({ book, deleteBook, showEdit }) {
   const handleError = (event) => {
-    event.target.src = "https://via.placeholder.com/150";
+    event.target.src = "https://placehold.co/150x140?text=Cover+coming+soon"
   };
   const style = {
     color: "black",
